@@ -1,0 +1,27 @@
+# Deep-learning runtime. Pin CUDA 12.8 because the SLURM cluster driver reports
+# CUDA driver API 12.8; an unconstrained PyPI install currently selects cu130.
+--extra-index-url https://download.pytorch.org/whl/cu128
+torch==2.8.0+cu128
+torchvision==0.23.0+cu128
+
+# Numerical and tensor/image utilities
+numpy>=1.23
+scipy>=1.10
+einops>=0.6
+
+# DataMerge creation and image I/O
+Pillow>=9.5
+opencv-python-headless>=4.7
+tifffile>=2023.4.12
+imageio>=2.31
+tqdm>=4.65
+ijson>=3.2
+
+# Super-resolution preprocessing and evaluation (PSNR, SSIM, etc.)
+scikit-image>=0.20
+
+# Configuration, manifests, logging, and visualization
+PyYAML>=6.0
+pandas>=1.5
+matplotlib>=3.7
+tensorboard>=2.12
